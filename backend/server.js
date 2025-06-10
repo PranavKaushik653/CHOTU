@@ -6,8 +6,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send("Welcome to CHOTU Grocery Assistant!");
-});
+const feedRoute=require("./route/feed");
+app.use("/api/feed",feedRoute);
 
-app.listen(5000, () => console.log('Backend running on port 3000'));
+// app.get('/', (req, res) => {
+//     res.send("Welcome to CHOTU Grocery Assistant!");
+// });
+
+app.listen(5000, () => console.log('Backend running on port 5000'));
+

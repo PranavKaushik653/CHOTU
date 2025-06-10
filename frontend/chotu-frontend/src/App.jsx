@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FeedMe from "./components/FeedMe";
 
 function App() {
   const [data, setData] = useState("");
@@ -14,6 +15,7 @@ function App() {
     <div>
       <h1>CHOTU Frontend</h1>
       <p>{data}</p>
+      <FeedMe/>
     </div>
   );
 }
